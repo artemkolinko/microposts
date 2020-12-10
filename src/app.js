@@ -2,6 +2,7 @@ import http from './http';
 import ui from './ui';
 import './assets/css/style.css';
 
+// CORS ??
 const apiUrl =
   'https://my-json-server.typicode.com/artemkolinko/microposts-api';
 // const apiUrl = 'http://localhost:3000/';

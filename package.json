@@ -4,7 +4,7 @@
   "description": "Microposts Project - CRUD Front End (Webpack & Babel)",
   "main": "app.js",
   "scripts": {
-    "deploy": "gh-pages -d build",
+    "deploy": "npm run build && gh-pages -d build",
     "dev": "webpack --mode development",
     "start": "webpack-dev-server --output-public-path=/build/ --mode development --progress --open --hot",
     "build": "webpack --mode production --progress",
