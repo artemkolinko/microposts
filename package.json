@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "deploy": "gh-pages -d build",
+    "dev": "webpack --mode development",
     "start": "webpack-dev-server --output-public-path=/build/ --mode development --progress --open --hot",
     "build": "webpack --mode production --progress",
     "jsonserver": "json-server --watch api/db.json"
@@ -13,13 +14,17 @@
   "license": "MIT",
   "homepage": "https://artemkolinko.github.io/microposts",
   "devDependencies": {
-    "@babel/core": "^7.4.3",
-    "babel-loader": "^8.0.5",
-    "@babel/polyfill": "^7.4.3",
-    "@babel/preset-env": "^7.4.3",
-    "webpack": "^4.16.1",
-    "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.10"
+    "@babel/core": "^7.12.10",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "gh-pages": "^3.1.0",

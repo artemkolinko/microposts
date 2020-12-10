@@ -1,16 +1,24 @@
 const path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+  context: path.resolve(__dirname, 'src'),
   entry: {
-    app: ['@babel/polyfill', './src/app.js'],
+    app: ['@babel/polyfill', './app.js'],
   },
   output: {
+    filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'build'),
-    filename: 'app.bundle.js',
   },
-  devServer: {
-    index: '/build/index.html',
-  },
+  // Plugins - usualy new Class()
+  plugins: [
+    new HTMLWebpackPlugin({
+      template: './index.html',
+    }),
+    new CleanWebpackPlugin(),
+  ],
+  // Loaders
   module: {
     rules: [
       {
@@ -20,6 +28,11 @@ module.exports = {
         query: {
           presets: ['@babel/preset-env'],
         },
+      },
+      {
+        test: /\.css$/,
+        // From right to left
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },

@@ -1,5 +1,6 @@
 import http from './http';
 import ui from './ui';
+import './assets/css/style.css';
 
 const apiUrl =
   'https://my-json-server.typicode.com/artemkolinko/microposts-api';
