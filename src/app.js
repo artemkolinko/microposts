@@ -1,19 +1,9 @@
-// commonJS module syntax
-// const arty = require('./commonjs');
-// console.log(arty);
-
-// ES2015 module syntax
-// import { ant, sayHi } from './module-es6';
-// console.log(ant);
-// console.log(sayHi());
-
 import http from './http';
 import ui from './ui';
 
-// const apiUrl = 'https://my-json-server.typicode.com/artemkolinko/microposts-api';
-const apiUrl = 'http://localhost:3000/';
-
-// const apiUrl = 'https://my-json-server.typicode.com/typicode/demo';
+const apiUrl =
+  'https://my-json-server.typicode.com/artemkolinko/microposts-api';
+// const apiUrl = 'http://localhost:3000/';
 
 document.addEventListener('DOMContentLoaded', getPosts);
 
