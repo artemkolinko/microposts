@@ -3,8 +3,10 @@ import ui from './ui';
 import './assets/css/style.css';
 
 // CORS ??
+// Proxy
+const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
 const apiUrl =
-  'https://my-json-server.typicode.com/artemkolinko/microposts-api';
+  'https://my-json-server.typicode.com/artemkolinko/microposts-api/';
 // const apiUrl = 'http://localhost:3000/';
 
 document.addEventListener('DOMContentLoaded', getPosts);
@@ -25,7 +27,7 @@ ui.postForm.addEventListener('click', cancelEdit);
 // Get posts controller
 function getPosts() {
   http
-    .get(apiUrl + 'posts')
+    .get(proxyUrl + apiUrl + 'posts')
     .then((data) => ui.showPosts(data))
     .catch((err) => console.log(err));
 }
